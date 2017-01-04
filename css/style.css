@@ -1,0 +1,201 @@
+body {
+    font-size: 16px;
+}
+
+hr {
+    position: relative;
+    background-color: black;
+    color: black;
+    right: 10px;
+    width: calc(100% - 20px);
+}
+
+header {
+    position: absolute;
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    top: 0;
+    left: 0;
+}
+
+section {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#modal-container {
+    position: absolute;
+    display: none;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.site-title {
+    display: inline;
+    color: white;
+    margin: 5px 10px 20px 10px;
+    vertical-align: 5px;
+    font-size: 1.2em;
+}
+
+.modal-window {
+    background-color: #fbfbfb;
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+}
+
+#modalAddProduct {
+    width: 420px;
+    height: 80%;
+    padding: 0px 0px 0px 20px;
+    overflow-y: hidden;
+}
+
+#product-add-modal-form {
+    display: block;
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+}
+
+#modalRemoveProduct,
+#modalRemoveEmployee {
+    width: 400px;
+    height: 30%;
+    padding: 0px 0px 0px 20px;
+    overflow-y: hidden;
+}
+
+#product-remove-modal-form,
+#employee-remove-modal-form {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#remove-product-submit,
+#remove-employee-submit {
+    position: absolute;
+    width: 40%;
+    height: 35px;
+    font-family: sans-serif;
+    background-color: #448275;
+    border-radius: 10px;
+    color: #f1f1f1;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#modalAddEmployee {
+    width: 400px;
+    height: 70%;
+    padding: 0px 0px 0px 20px;
+    overflow-y: hidden;
+}
+
+#employee-add-modal-form {
+    display: block;
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+}
+
+#modalPurchase {
+    height: 70%;
+    padding: 0px 0px 0px 20px;
+    overflow-y: hidden;
+    display: none;
+    /*flex-direction: column;*/
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: .6em;
+    font-family: cursive;
+    cursor: pointer;
+    color: black;
+}
+
+.close-button:hover {
+    color: red;
+}
+
+input[type='text'],
+input[type='number'],
+textarea {
+    border: 1px solid #818181;
+}
+
+#username {
+    color: #f1f1f1;
+    font-size: 1em;
+    margin: 15px 10px 5px 20px;
+    vertical-align: 17px;
+}
+
+#user-image {
+    background-color: blue;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+hgroup {
+    display: inline-block;
+}
+
+.usergroup {
+    float: right;
+    margin-right: 20px;
+}
+
+.transaction-table {
+    border-spacing: 0;
+    border: 1px solid #818181;
+    border-radius: 5px;
+    height: 70%;
+    margin-right: 20px;
+    /*width: 100%;*/
+}
+
+.transaction-table tbody td {
+    margin: 0;
+    padding: 5px;
+}
+
+.transaction-table tbody tr:nth-child(odd) {
+    background-color: #f6f6f6;
+}
+
+.transaction-table tbody {
+    overflow-y: auto;
+}
+
+.transaction-table thead,
+th {
+    background-color: #B8C0C8;
+    color: #708090;
+    text-align: center;
+    white-space: nowrap;
+    padding: 10px;
+}
