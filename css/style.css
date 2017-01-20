@@ -26,6 +26,10 @@ section {
     height: 100%;
 }
 
+input{
+    padding: 5px;
+}
+
 #modal-container {
     position: absolute;
     display: none;
@@ -56,22 +60,36 @@ section {
     z-index: 30;
 }
 
+#modalAddProduct input:not([type="submit"]), #modalAddEmployee input:not(.skip){
+    
+    width: 300px;
+    border-radius: 3px;
+}
+
+#modalAddProduct p, #modalAddEmployee p, #modalAddCompany p{
+    
+    width: 320px;
+    margin: 10px auto;
+}
+
 #modalAddProduct {
     width: 420px;
     height: 80%;
     padding: 0px 0px 0px 20px;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 #product-add-modal-form {
     display: block;
+    position: relative;
     width: 100%;
-    height: 80%;
+    /*height: 80%;*/
     overflow-y: auto;
 }
 
 #modalRemoveProduct,
-#modalRemoveEmployee {
+#modalRemoveEmployee,
+#modalRemoveCompany{
     width: 400px;
     height: 30%;
     padding: 0px 0px 0px 20px;
@@ -79,15 +97,37 @@ section {
 }
 
 #product-remove-modal-form,
-#employee-remove-modal-form {
+#employee-remove-modal-form,
+#company-remove-modal-form{
     display: block;
     width: 100%;
     height: 100%;
     overflow-y: auto;
 }
 
+#product-remove-modal-form p,
+#employee-remove-modal-form p,
+#company-remove-modal-form p{
+
+    width: 300px;
+    margin: 10px auto;
+    position: relative;
+
+}
+
+#remove-product-code,
+#remove-employee-code,
+#remove-company-code{
+    width: 250px;
+    margin: 5px 0px 20px 0px;
+}
+
+
+
+
 #remove-product-submit,
-#remove-employee-submit {
+#remove-employee-submit,
+#remove-company-submit{
     position: absolute;
     width: 40%;
     height: 35px;
@@ -105,15 +145,15 @@ section {
 
 #modalAddEmployee {
     width: 400px;
-    height: 70%;
+    height: 80%;
     padding: 0px 0px 0px 20px;
     overflow-y: hidden;
 }
 
 #employee-add-modal-form {
     display: block;
-    width: 100%;
-    height: 80%;
+    position: relative;
+    width: 100%;    
     overflow-y: auto;
 }
 
@@ -125,6 +165,19 @@ section {
     /*flex-direction: column;*/
 }
 
+#modalAddCompany{
+   height: 80%;
+   padding: 0px 0px 0px 20px;
+   width: 500px;
+}
+#modalAddCompany select, #modalAddCompany input:not([type="submit"]){
+    width: 300px;
+    margin-top: 2px;
+    margin-bottom: 6px;
+    padding: 5px;
+    border-radius: 2px;
+}
+
 .close-button {
     position: absolute;
     top: 5px;
@@ -134,6 +187,23 @@ section {
     cursor: pointer;
     color: black;
 }
+input#add-product-submit,
+input#add-employee-submit,
+input#add-company-submit{
+    
+    background-color: #448275;
+    color: #fff;
+    position: relative;
+    width: 200px;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    left: calc(50% - 100px);
+    
+}
+
 
 .close-button:hover {
     color: red;

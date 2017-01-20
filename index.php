@@ -114,7 +114,7 @@ if (!isset($_SESSION['me'])) {
         </section>
 
         <section>
-            
+
         </section>
         <section id="modal-container">
             <form class="modal-window" id="modalAddProduct" method="POST" action="#">
@@ -122,10 +122,10 @@ if (!isset($_SESSION['me'])) {
                 <hr>
                 <div  id="product-add-modal-form" class='mCustomScrollbar' data-mcs-theme='minimal-dark'>
                     <p><label>Product Id:</label><br>
-                        <input type="text" id="add-product-code" name="add-product-code" value='' maxlength="10">
+                        <input type="text" id="add-product-code" name="add-product-code" value='' maxlength="10" autofocus>
                     </p>
-                    <p><label>Product Description:</label><br>
-                        <input type="text" id="add-product-description" name="add-product-description" value='' maxlength="100">
+                    <p><label>Product Name:</label><br>
+                        <input type="text" id="add-product-name" name="add-product-name" value='' maxlength="100">
                     </p>
                     <p><label>Brand:</label><br>
                         <input type="text" id="add-brand" name="add-brand" value='' maxlength="20">
@@ -137,16 +137,17 @@ if (!isset($_SESSION['me'])) {
                         <input type="number" id="add-purchase-price" name="add-purchase-price" value='' maxlength="10">
                     </p>
                     <p><label>Remark:</label><br>
-                        <textarea rows="3" cols="21" id="add-remark" name="add-remark"></textarea>
+                        <textarea rows="3" cols="37" id="add-remark" name="add-remark"></textarea>
                     </p>
                 </div>
+                <p class="bottom-bar"> <input   type="submit" id="add-product-submit" name="add-product-submit" value="Add"></p>
             </form>
             <form  class="modal-window" id="modalRemoveProduct" method="POST" action="#">
                 <h2 class="window-title">Remove Product<span class="close-button">X</span></h2>
                 <hr>
                 <div id="product-remove-modal-form">
                     <p><label>Product Id:</label><br>
-                        <input type="text" id="remove-product-code" name="remove-product-code" value='' maxlength="10">
+                        <input type="text" id="remove-product-code" name="remove-product-code" value='' maxlength="10" autofocus>
                     </p>
                     <input  type="submit" id="remove-product-submit" name="remove-product-submit" value="Remove">
 
@@ -157,7 +158,7 @@ if (!isset($_SESSION['me'])) {
                 <hr>
                 <div  id="employee-add-modal-form">
                     <p><label>Employee Id:</label><br>
-                        <input type="text" id="add-employee-code" name="add-employee-code" value='' maxlength="10">
+                        <input type="text" id="add-employee-code" name="add-employee-code" value='' maxlength="10" autofocus>
                     </p>
                     <p><label>Employee Name:</label><br>
                         <input type="text" id="add-employee-name" name="add-employee-name" value='' maxlength="100">
@@ -172,18 +173,53 @@ if (!isset($_SESSION['me'])) {
                         <input type="text" id="add-employee-post" name="add-employee-post" value='' maxlength="10">
                     </p>                    
                     <p><label>Remark:</label><br>
-                        <textarea rows="3" cols="21" id="add-employee-remark" name="add-employee-remark"></textarea>
+                        <textarea rows="3" cols="37" id="add-employee-remark" name="add-employee-remark"></textarea>
                     </p>
                 </div>
+                <p class="bottom-bar"> <input  class="skip" type="submit" id="add-employee-submit" name="add-employee-submit" value="Add"></p>
             </form>
             <form  class="modal-window" id="modalRemoveEmployee" method="POST" action="#">
                 <h2 class="window-title">Remove Employee<span class="close-button">X</span></h2>
                 <hr>
                 <div id="employee-remove-modal-form">
                     <p><label>Employee Id:</label><br>
-                        <input type="text" id="remove-employee-code" name="remove-employee-code" value='' maxlength="10">
+                        <input type="text" id="remove-employee-code" name="remove-employee-code" value='' maxlength="10" autofocus>
                     </p>
                     <input  type="submit" id="remove-employee-submit" name="remove-employee-submit" value="Remove">
+
+                </div>
+            </form>
+
+            <form class="modal-window" id="modalAddCompany" method="POST" action="#">
+                <h2 class="window-title">Add Company<span class="close-button">X</span></h2>
+                <hr>
+                <div  id="company-add-modal-form">
+                    <p><label>Company Id:</label><br>
+                        <input type="text" id="add-company-code" name="add-company-code" value='' maxlength="10" autofocus>
+                    </p>
+                    <p><label>Company Name:</label><br>
+                        <input type="text" id="add-company-name" name="add-company-name" value='' maxlength="100"></p>
+                     <p><label>Contact No:</label><br>
+                        <input type="text" id="add-company-contactno" name="add-company-contactno" value='' maxlength="150" >  
+                    </p>
+                    <p><label>Address:</label><br>
+                        <input type="text" id="add-company-address" name="add-company-address" value='' maxlength="150" >  
+                    </p>
+                    <p><label>Country</label><br><select class="crs-country" id="company-country" data-region-id="company-region" data-default-value="Bangladesh"></select></p>
+                    <p><label>Region</label><br><select  id="company-region"></select></p>
+
+                </div>
+                <p class="bottom-bar"> <input   type="submit" id="add-company-submit" name="add-company-submit" value="Add"></p>
+            </form>
+
+            <form  class="modal-window" id="modalRemoveCompany" method="POST" action="#">
+                <h2 class="window-title">Remove Employee<span class="close-button">X</span></h2>
+                <hr>
+                <div id="company-remove-modal-form">
+                    <p><label>Company Id:</label><br>
+                        <input type="text" id="remove-company-code" name="remove-company-code" value='' maxlength="10" autofocus>
+                    </p>
+                    <input  type="submit" id="remove-company-submit" name="remove-company-submit" value="Remove">
 
                 </div>
             </form>
@@ -208,7 +244,7 @@ if (!isset($_SESSION['me'])) {
                     <tbody>
                         <tr>
                             <td></td>
-                            <td><input type="text" id="item-name" placeholder="Item Name" class="tableInput"></th>
+                            <td><input type="text" id="item-name" placeholder="Item Name" class="tableInput" autofocus></th>
                             <td></td>
                             <td></td>
                             <td><input type="text" id="unit" placeholder="Unit" class="tableInput"></td>
@@ -224,8 +260,11 @@ if (!isset($_SESSION['me'])) {
         </section>
 
         <script src="js/jquery.js"></script>
+        <script src="js/crs.js"></script>
+
         <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/ClassLibrary.js"></script>
         <script>
             $('#unit-price').on('keypress', function (e)
             {
